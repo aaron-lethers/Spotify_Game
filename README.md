@@ -2,7 +2,15 @@
 Working with ID-F22 to make a Spotify game! 
 
 WHAT I WORKED ON:
- - hey! so im gonna call it today, i made a little progress and i think i will call it here.
+6/3:
+ - Took notes on OAUTH (under spotify header)
+ - started fresh, wanted to to connect to spotify's api without external lib (spotipy)
+ - following: https://developer.spotify.com/documentation/general/guides/authorization/code-flow/
+ 	- flow chart of everything we need to connect to spotify
+ - moved app.py -> old_app.py and created a new app.py
+ - able to get access tokens!!!!!!!!! woo hoo!!!!!!!
+ - REQUEST ACCESS TOKEN IS DONE :D
+6/2:
  - i found a nice python library called "spotipy" (get it haha) which helps us connect to the spotify api
  - thru the spotipy docs, i found a way to do oauth (i think this is just spotify giving access to us (our app) to use the "users" data)
  - hopefully you can get this set up, i wrote some stuff about setting up flask and downloading the spotipy lib
@@ -18,6 +26,12 @@ WHAT I WORKED ON:
  BEST OF LUCK TO YOU! HOPE EVERYTHING GOES WELL
 
 TODO and NEXT STEPS:
+6/3:
+ - finish setting up the authorization
+ 	- refresh tokens. <- 
+ - make enviornment variables
+
+6/2:
  - finish the tutorial
  - start pulling data that we actually need for this game: ie. artist views 
  - token will expire, somehow we will need to generate a new one
@@ -48,6 +62,9 @@ FLASK:
  	- A session makes it possible to remember information from one request to another
  	- dont think u have to install this... i just imported it
  	- this is different from Flask-Session (i think)
+ - Request vs Requests:
+ 	- request is a flask lib that takes in form data from a client
+ 	- requests is to make HTTP requests to other sites, generally APIs
 
 SPOTIFY API:
  - https://developer.spotify.com/documentation/web-api/reference/#/
@@ -64,17 +81,25 @@ SPOTIFY API:
  - Updated Spotify Dashboard with our redirect links
  	- currently redirecting to 'home.html'
  	- you can see these if you click "edit settings" in our spotify dashboard (first gotta click our project "Spotify_game")
+ - OAUTH2.0:
+ 	- Authorization vs authentication:
+ 		- Authentication: process of a user proving its owenership of a presented identity, generally by providing a username and password
+ 		- Authorization: process of letting a subject access resources after a successful authentication. 
+ 			- OAUTH -> authorization, deals with API calls. We are asking spotify for us to access their resources. 
+ 			- Metaphor: OAUTH is similar to a car's valet key. Given to a valet to temporarily drive and park the car. The valet does not own the car
+ 						but is allowed to use the car (resources) while given access. 
+	- Framework, not a protocol
+	- Uses HTTPS (HTTPS is a secure way to send data between a web server and a web browser)
+	1. Authorization process requires valid client_id and client_secret (found on dashboard).
+	2. Once authorization is granted, the authorization server (spotify) issues an access token. This is used to make API calls on behalf of the 	   user or application (our app!)
+	- https://developer.spotify.com/documentation/general/guides/authorization/code-flow/ <- great doc, primarily followed this 
 
+<---- NOT BEING USED ---->
 SPOTIPY:
  - https://spotipy.readthedocs.io/en/2.19.0/#
  - python library for the spotify web api! 
  - To install (do this in your venv):
  	- pip install spotipy --upgrade
  - SpotifyOAuth: not quite sure what this object does, but i think it makes a connection to the spotify api
-
-
-
-NOTES:
- - its quite confusing and i dont understand it fully. found some tutorils, watched some vids, copied some code. 
 
 
