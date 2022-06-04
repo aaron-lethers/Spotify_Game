@@ -11,6 +11,7 @@ WHAT I WORKED ON:
  - moved app.py -> old_app.py and created a new app.py
  - able to get access tokens!!!!!!!!! woo hoo!!!!!!!
  - REQUEST ACCESS TOKEN IS DONE :D
+
 6/2:
  - i found a nice python library called "spotipy" (get it haha) which helps us connect to the spotify api
  - thru the spotipy docs, i found a way to do oauth (i think this is just spotify giving access to us (our app) to use the "users" data)
