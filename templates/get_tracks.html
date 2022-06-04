@@ -1,3 +1,8 @@
 <h1>GET TRACKS</h1>
 
-{{ data }}
+<ul>
+	{% for song in liked_songs %}
+		<li>Artist: {{ song['artist'] }}</li>
+		<li>Track: {{ song['song'] }}</li>
+	{% endfor %}
+</ul>
