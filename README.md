@@ -2,6 +2,7 @@
 Working with ID-F22 to make a Spotify game! 
 
 WHAT I WORKED ON:
+
 6/3:
  - Took notes on OAUTH (under spotify header)
  - started fresh, wanted to to connect to spotify's api without external lib (spotipy)
@@ -26,6 +27,7 @@ WHAT I WORKED ON:
  BEST OF LUCK TO YOU! HOPE EVERYTHING GOES WELL
 
 TODO and NEXT STEPS:
+
 6/3:
  - finish setting up the authorization
  	- refresh tokens. <- 
