@@ -98,6 +98,7 @@ SPOTIFY API:
 	- https://developer.spotify.com/documentation/general/guides/authorization/code-flow/ <- great doc, primarily followed this 
 
 <---- NOT BEING USED ---->
+
 SPOTIPY:
  - https://spotipy.readthedocs.io/en/2.19.0/#
  - python library for the spotify web api! 
